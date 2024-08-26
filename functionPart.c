@@ -14,7 +14,8 @@ int calculator(){
            "               2. Division\n"
            "               3. Addition\n"
            "               4. Subtraction\n"
-           "               5. Exit\n\n"
+           "               5. Factorial\n"
+           "               6. Exit\n\n"
            "               Enter your choice: ");
 
     scanf("%d",&choice);
@@ -61,6 +62,21 @@ int calculator(){
           goto chde;
       break;
       case 5:
+          printf("\n" "               Enter your factorial number: ");
+          scanf("%lf",&num1);
+
+          int result = 1;
+
+          for(int i = 1;i<=num1;i++){
+            result *= i;
+          }
+
+          printf("\n""               Your factorial is: %d",result);
+          sleep(4);
+          system("cls");
+          goto chde;
+      break;
+      case 6:
           exit(0);
       break;
       default:
